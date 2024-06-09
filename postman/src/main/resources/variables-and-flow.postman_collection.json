@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "d00a37c1-2794-490c-a56e-8c2037833dd5",
+		"name": "variables-and-flow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12013619"
+	},
+	"item": [
+		{
+			"name": "helath",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/healthcheck",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inquiry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"subject\": \"Product Inquiry\",\n  \"message\": \"I am interested in learning more about your products. Please provide more information.\",\n  \"inquiryDate\": \"2024-01-21\"\n}\n"
+				},
+				"url": {
+					"raw": "{{URL}}/inquiry",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"inquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inquiry Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"12345\",\n  \"amount\": 150.00,\n  \"currency\": \"USD\",\n  \"paymentMethod\": \"Credit Card\",\n  \"paymentDate\": \"2024-01-21\"\n}\n"
+				},
+				"url": {
+					"raw": "{{URL}}/payment",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "NAME",
+			"value": "Ricardo",
+			"type": "string"
+		},
+		{
+			"key": "EMAIL",
+			"value": "jruales99@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "SUBJECT",
+			"value": "Prod inq",
+			"type": "string"
+		},
+		{
+			"key": "MESSAGE",
+			"value": "I am interested in learning more about your products.",
+			"type": "string"
+		},
+		{
+			"key": "INQUIRY_DATE",
+			"value": "2024-01-21",
+			"type": "string"
+		},
+		{
+			"key": "USERID",
+			"value": "jruales99@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "AMOUNT",
+			"value": "10.00",
+			"type": "string"
+		},
+		{
+			"key": "CURRENCY",
+			"value": "01",
+			"type": "string"
+		},
+		{
+			"key": "PAYMENT_METHOD",
+			"value": "01",
+			"type": "string"
+		},
+		{
+			"key": "PAYMENT_DATE",
+			"value": "2024-01-21",
+			"type": "string"
+		}
+	]
+}
